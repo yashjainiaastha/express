@@ -3,10 +3,7 @@ const app = express();
 
 const userRouter = require('./routes/userRoutes');
 const noteRouter = require('./routes/noteRoutes');
-//const dotenv = require("dotenv");
 const cors = require("cors");
-
-//dotenv.config();
 
 const mongoose = require("mongoose");
 
@@ -22,7 +19,6 @@ app.get("/",(req,res) => {
     res.send('Task Manager');
 });
 
-//const PORT = process.env.PORT || 3200;
 
 mongoose.connect("mongodb+srv://yashj8281:yashjain@cluster0.bnhpdt6.mongodb.net/")
 .then(() => {
